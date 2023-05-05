@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Credit card</title>
+    <style>
+      .headerdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        width: 150 px;
+        height: 250 px;
+        margin: 30px;
+        overflow: hidden;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        background-color: silver;
+        border-radius: 30px;
+        
+      }
+      .cards {
+        display: flex;
+        /* flex-direction: column; */
+
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      #ccone {
+        width: 400px;
+        height: 250px;
+      }
+      .middiv {
+        /* background-color: orange; */
+        height: 673px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      p {
+        background-color: darkgray;
+        /* display: block;
+        align-items: center;
+        justify-content: center; */
+        /* padding-top: 110px; */
+      }
+      .cardbut #addcard{
+        width: 100px;
+        height: 50px;
+        border: none;
+        background-color: dimgray;
+        color: white;
+        /* font-size: large; */
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+        border-radius: 3px 20px 3px 20px;
+      }
+      #add{
+        
+        width: 90px;
+        height: 40px;
+        border: none;
+        background-color: gainsboro;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        /* font-size: medium; */
+        border-radius: 10px ;
+      }
+      .cardbut #addcard:hover{
+        box-shadow: 4px 2px 0px 0px black;
+        
+      }
+      .formdiv{
+        position: absolute;
+        background-color: rgb(87, 87, 100);
+        height: 50%;
+        width: 30%;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: large;
+        border-radius: 10px;
+        display: none;
+      }
+      .formdiv input{
+        padding: 10px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        margin: 7px;
+      }
+      .forminner{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+  </head>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 40
+    }
+    </style>
+  <body>
+    <div class="headerdiv">
+      <h1 id="demo" onclick="display()">CREDIT CARD</h1>
+      <hr size="4" width="100%" color="#fc0303" />
+    </div>
+
+    <div class="middiv">
+      <div class="formdiv" id="form">
+        <div class="forminner">
+        <form action="/addcard" method="post">
+          <button><span class="material-symbols-outlined">
+            close
+            </span>   </button>
+          <table>
+            <tr>
+              <td>
+                <label for="cardnum">Card.No:</label>
+              </td>
+              <td><input type="text" size="16" id="cardnum" name="cardnum"></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="limit">Limit</label>
+              </td>
+              <td><input type="text" id="limit" name="limit"></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="exp">Expiry Date</label>
+              </td>
+              <td><input type="text" id="exp" name="exp"></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="duedate">Duedate:</label>
+              </td>
+              <td><input type="text" size="12" id="duedate" name="duedate"></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="type">Type
+              <td><input type="text" size="12" id="type" name="type"></td>
+            </tr>
+            <tr>
+              <td>
+                <label for="cvv">CVV</label>
+              </td>
+              <td><input type="text" size="3" id="cvv" name="cvv"></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button id="add" type="submit">ADD CARD</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      </div>
+      <div class="cardbut">
+        <button id="addcard" onclick="addcard()">ADD CARD</button>
+      </div>
+      <div class="cards">
+          <%for(var i=0;i<data.length;i++){%>
+            <div class="card" id="ccone">
+              <p>
+              <%=data[i].card1+" "+data[i].card2+" "+data[i].card3%>
+              <%=data[i].card4%>
+            </p>
+            <p>
+              <%=data[i].cvv%>
+            </p>
+            <p><%=data[i].expiry%></p>
+            <p><%=data[i].type%></p>
+          </div>
+          <%}%>
+      </div>
+    </div>
+    <script src="creditcard.js"></script>
+  </body>
+</html>

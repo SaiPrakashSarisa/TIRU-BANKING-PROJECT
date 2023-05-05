@@ -1,0 +1,65 @@
+[
+  {
+    "accnum": "202330802057",
+    "cardnumber": "1522260512215662",
+    "expiry": "2027-05-06",
+    "cvv": 977,
+    "limit": 50000,
+    "duedate": "5",
+    "type": "MasterCard"
+  },
+  {
+    "accnum": "202330602357",
+    "cardnumber": "2169508573911415",
+    "expiry": "2027-05-06",
+    "cvv": 977,
+    "limit": 50000,
+    "duedate": "5",
+    "type": "MasterCard"
+  },
+  {
+    "accnum": "202330602357",
+    "cardnumber": "2169508573911415",
+    "expiry": "2030-11-10",
+    "cvv": 567,
+    "limit": 500000,
+    "duedate": "5",
+    "type": "PLATINA"
+  },
+  {
+    "accnum": "202330602357",
+    "cardnumber": "2169508573911415",
+    "expiry": "2075-11-9",
+    "cvv": 567,
+    "limit": 1000000,
+    "duedate": "5",
+    "type": "American Express"
+  },
+  {
+    "accnum": "202330602357",
+    "cardnumber": "2169508573911415",
+    "expiry": "2030-11-10",
+    "cvv": 567,
+    "limit": 500000,
+    "duedate": "5",
+    "type": "Hello"
+  },
+  {
+    "accnum": "202330602357",
+    "cardnumber": "6301951821732003",
+    "expiry": "2030-11-10",
+    "cvv": 799,
+    "limit": 500000,
+    "duedate": "5",
+    "type": "Hello"
+  },
+  {
+    "accnum": "202330602057",
+    "cardnumber": "3055688685653720 ",
+    "expiry": "2030-12-09",
+    "cvv": 100,
+    "limit": 5000000,
+    "duedate": "5",
+    "type": "MX"
+  }
+]

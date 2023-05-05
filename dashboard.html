@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style>
+      .card {
+        /* text-emphasis-color: black; */
+        /* background-color: orange; */
+        width: 500px;
+        height: 200px;
+        /* margin: 50px; */
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        position: relative;
+        background-color: rgb(240, 221, 146);
+        /* background-color: cornsilk; rgb(240, 221, 146)*/
+      }
+      .card img {
+        position: absolute;
+        width: 500px;
+        height: 200px;
+        opacity: 0.7;
+      }
+      .card p {
+        position: absolute;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      .cardsdiv {
+        display: flex;
+        float: left;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 20px;
+        font-size: 30px;
+      }
+      .card:hover {
+        /* height: 500px;
+        width: 200px; */
+        transform: scale(1.1);
+        transition: 0.5ms;
+        overflow: visible;
+        /* transform: translate(0); */
+      }
+      .headerdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #savings,
+      #creditcard {
+        display: flex;
+        float: left;
+        margin: 20px;
+      }
+      #loans,
+      #investments {
+        display: flex;
+        float: left;
+        margin: 20px;
+      }
+      .cards {
+        width: 500px;
+        height: 800px;
+        margin: 20px;
+        /* border: 2px; */
+      }
+      .headerdiv div {
+        position: absolute;
+        right: 80px;
+        display: inline-flex;
+      }
+      /* .headerdiv span {
+        z-index: 1;
+      } */
+      /* .dropdown {
+        display: inline-block;
+        display: flex;
+        position: relative;
+      }
+      .btn {
+        background: none;
+        border: none;
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .dropmenu {
+        display: none;
+        position: absolute;
+        min-width: 70px;
+        z-index: 1;
+      }
+      .dropmenu:hover {
+        display: block;
+      }
+      .dropmenu a {
+        display: none;
+        text-decoration: none;
+        color: black;
+        padding: 12px 16px;
+      }
+      .dropmenu a:hover {
+        background-color: whitesmoke;
+        display: block;
+      }
+      .dropdown:hover .dropmenu {
+        display: block;
+      }
+      .dropdown:hover .btn {
+        background-color: azure;
+      }
+      .btn:hover {
+        display: block;
+      } */
+      .all {
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        justify-content: baseline;
+        align-items: baseline;
+      }
+      .all #element {
+        padding-top: 4px;
+        width: max-content;
+        margin: 8px;
+        font-size: large;
+        font-style: oblique;
+      }
+      ion-icon {
+        display: inline-flex;
+        width: 30px;
+        height: 30px;
+        /* background: none; */
+        align-items: center;
+        justify-content: center;
+        padding-top: 5px;
+
+        /*background-color: aliceblue;
+        border: 0;
+        border: 3px; */
+      }
+    </style>
+  </head>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <body>
+    <div class="headerdiv">
+      <img src="" alt="" />
+      <h1>DASHBOARD</h1>
+      <div class="all">
+        <div class="dropdown">
+          <p id="element"></p>
+          <!-- <button class="btn"><ion-icon name="person"></ion-icon></button> -->
+          <ion-icon name="person"></ion-icon>
+          <!-- <div class="dropmenu">
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <hr size="4" width="100%" color="orange" />
+    <div class="cardsdiv">
+      <div class="cards">
+        <div
+          class="card"
+          id="savings"
+          onclick="window.location.href='/savings'"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/002/283/140/original/people-save-money-in-a-large-piggy-bank-free-vector.jpg"
+            alt=""
+          />
+          <p>Savings</p>
+        </div>
+        <div
+          class="card"
+          id="creditcard"
+          onclick="window.location.href='/creditcard'"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9yDw8k06QCW5brf7elLY6lPUqFZOIUoKpdQ&usqp=CAU"
+            alt=""
+          />
+          <p>Credit Card</p>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card" id="loans" onclick="window.location.href='/loans'">
+          <img
+            src="https://media.istockphoto.com/id/472991364/sv/vektor/cartoon-hand-giving-money-to-another-man-as-a-donation.jpg?s=612x612&w=0&k=20&c=nVoBSoLn5lvYqZps2cbkpKfJSwhoDB64URqqXvdfw_I="
+            alt=""
+          />
+          <p>Loans</p>
+        </div>
+        <div
+          class="card"
+          id="investments"
+          onclick="window.location.href='/investments'"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/006/411/650/original/business-flat-drawing-happy-businessman-in-hot-air-balloon-with-money-bag-looking-with-telescope-or-monocular-business-concept-searching-growth-leadership-investment-cartoon-illustration-vector.jpg"
+            alt=""
+          />
+          <p>Investments</p>
+        </div>
+      </div>
+    </div>
+    <script src="reg.js"></script>
+  </body>
+</html>
